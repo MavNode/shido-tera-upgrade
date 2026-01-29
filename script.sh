@@ -1,9 +1,7 @@
-// !!!THIS SCRIPT IS YET TO BE UPDATED!!!
-
 #!/bin/bash
 
-# Shido Node Upgrade Script for v3.2.0 Upgrade
-# This script automates the node upgrade process for the chain proposal at height 23500000
+# Shido Node Upgrade Script for v3.3.0 Upgrade
+# This script automates the node upgrade process for the chain proposal at height 27200000
 
 set -e  # Exit on any error
 
@@ -13,33 +11,11 @@ echo "============================================"
 echo "Upgrade Height: 27200000"
 echo ""
 
-# Ask user to select Ubuntu version
-echo "Please select your Ubuntu version:"
-echo "1) Ubuntu 20.04"
-echo "2) Ubuntu 22.04/24"
-echo ""
-read -p "Enter your choice (1 or 2): " choice
-
-case $choice in
-    1)
-        UBUNTU_VERSION="20.04"
-        DOWNLOAD_URL="https://github.com/ShidoGlobal/shidochain-tera-upgrade/releases/download/tera/shidod"
-        echo "Selected: Ubuntu 20.04"
-        ;;
-    2)
-        UBUNTU_VERSION="22.04/24"
-        DOWNLOAD_URL="https://github.com/ShidoGlobal/shidochain-tera-upgrade/releases/download/tera/shidod"
-        echo "Selected: Ubuntu 22.04/24"
-        ;;
-    *)
-        echo "Invalid choice. Please run the script again and select 1 or 2."
-        exit 1
-        ;;
-esac
+DOWNLOAD_URL="https://github.com/ShidoGlobal/shidochain-tera-upgrade/releases/download/tera/shidod"
 
 echo ""
 echo "============================================"
-echo "Starting Upgrade Process for Ubuntu $UBUNTU_VERSION"
+echo "Starting Upgrade Process"
 echo "============================================"
 
 # Step 1: Stop the node
@@ -53,7 +29,7 @@ sudo rm -f /usr/local/bin/shidod
 echo "✓ Old binary removed"
 
 # Step 3: Download the new binary
-echo "Step 3: Downloading new shidod binary for Ubuntu $UBUNTU_VERSION..."
+echo "Step 3: Downloading new shidod binary..."
 cd $HOME
 curl -L -o shidod $DOWNLOAD_URL
 echo "✓ Binary downloaded"
