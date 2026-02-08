@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Shido Node Upgrade Script for v3.3.0 Upgrade
-# This script automates the node upgrade process for the chain proposal at height 27200000
+# Shido Node Upgrade Script for v3.3.1 Upgrade
+# This script automates the node upgrade process for the chain proposal at height 28000000
 
 set -e  # Exit on any error
 
 echo "============================================"
-echo "    Shido Node Upgrade to TERA"
+echo "    Shido Node Upgrade to TERA v3.3.1"
 echo "============================================"
-echo "Upgrade Height: 27200000"
+echo "Upgrade Height: 28000000"
 echo ""
 
-DOWNLOAD_URL="https://github.com/ShidoGlobal/shidochain-tera-upgrade/releases/download/tera/shidod"
+DOWNLOAD_URL="https://github.com/ShidoGlobal/shido-upgrade-v3.3.1/releases/download/v3.3.1/shidod"
 
 echo ""
 echo "============================================"
@@ -44,7 +44,7 @@ echo "✓ New binary installed with proper permissions"
 echo "Step 5: Verifying new version..."
 echo "New shidod version:"
 /usr/local/bin/shidod version
-echo "Expected output: 3.3.0"
+echo "Expected output: 3.3.1"
 echo "✓ Version verified"
 
 # Step 6: Start the node
