@@ -1,6 +1,6 @@
 # Shido Node Upgrade Script
 
-Automated scripts for upgrading Shido nodes to Tera.
+Automated scripts for upgrading Shido nodes to TERA v3.3.1.
 
 This repository provides two upgrade options:
 
